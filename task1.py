@@ -14,11 +14,10 @@ def filter_transactions(transaction):
 
 def format_output(date_total):
     """
-    Converts the tuples back into a dictionary
+    Converts the tuples back into a dictionary-like string
     """
-    return f'{date_total[0]}, {date_total[1]}'
+    return f"Date: {date_total[0]}, Total Amount: {date_total[1]}"
 
-#The Pipeline
 def run():
     options = PipelineOptions()
     with beam.Pipeline(options=options) as p:
